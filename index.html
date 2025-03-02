@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VitaNova AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        header {
+            text-align: left;
+            position: relative;
+        }
+        .logo {
+            font-size: 2em;
+        }
+        .subtitle {
+            font-size: 1.5em;
+            margin-top: 0.5em;
+        }
+        .tagline {
+            margin-top: 0.5em;
+        }
+        .safety-box {
+            position: absolute;
+            top: 35px;
+            right: 15px;
+            padding: 10px;
+            background-color: #14326d; /* Changed to match the header */
+            border: 2px solid #000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <div class="logo">VitaNova AI</div> -->
+        <!-- <div class="subtitle">Rebuilding Civilization - Recovery Zone Classification</div> -->
+    <div>
+        <h1 className="text-2xl font-bold text-amber-500">VitaNova AI</h1>
+              <p className="text-xs text-amber-200/60">Rebuilding Civilization - Recovery Zone Classification</p>
+    </div>
+        <!-- <div class="tagline">/div> -->
+        <div class="safety-box">Safety First</div>
+    </header>
+
+    <main>
+        <!-- <section class="hero">
+            <h1>AI-Powered Waste Classification for Recovery Zones</h1>
+            <p>Helping war-affected regions implement efficient waste management systems using AI technology.</p>
+        </section> -->
+
+        <section class="hero">
+            <p class="welcome-message">
+                <h1>Welcome to Recovery Assistant</h1>
+                <p> Together, we're rebuilding communities through smart material classification and safe recovery practices. Let's work towards a sustainable future.</p>
+            </p>
+        </section>
+        
+        <section class="classifier-container">
+            <div class="upload-section">
+                <label for="imageUpload" class="upload-label">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Upload Waste Image</span>
+                </label>
+                <input type="file" id="imageUpload" accept="image/*">
+                <button id="classifyBtn" onclick="predictImage()">Classify Waste</button>
+            </div>
+            
+            <div id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Processing with AI...</p>
+            </div>
+            
+            <div class="results-container">
+                <div class="image-preview">
+                    <img id="preview" style="display: none;">
+                </div>
+                <div class="classification-results">
+                    <p id="result">Upload an image to classify waste material.</p>
+                    <div id="recommendations" style="display: none;"></div>
+                </div>
+            </div>
+            
+            <!-- Perplexity Results will appear here -->
+            <div id="perplexityResults"></div>
+        </section>
+        
+        <section class="info-section">
+            <div class="info-card sustainability">
+                <h2><i class="fas fa-seedling"></i> Sustainability Impact</h2>
+                <p>Proper waste classification in recovery zones helps:</p>
+                <ul>
+                    <li>Identify reusable building materials</li>
+                    <li>Prevent environmental contamination</li>
+                    <li>Facilitate resource recycling</li>
+                    <li>Support cleanup and reconstruction efforts</li>
+                </ul>
+            </div>
+            
+            <div class="info-card post-war-classification">
+                <h2><i class="fas fa-shield-alt"></i> Post-War Waste Classification & Analysis</h2>
+                <p>Advanced AI-powered system for identifying and categorizing post-conflict materials, ensuring safe recovery and optimal resource management.</p>
+                <ul>
+                    <li>Hazard Level Assessment</li>
+                    <li>Recovery Priority Classification</li>
+                    <li>Safe Handling Protocols</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="sponsors">
+            <p>Powered by: Perplexity</p>
+            <div class="sponsor-logos">
+                <!-- Removed Groq AI and Perplexity AI logos -->
+            </div>
+        </div>
+        <p class="copyright">© 2025 VitaNova AI - AI for Sustainable Recovery</p>
+    </footer>
+
+    <!-- Load Environment Configuration -->
+    <script src="config.js"></script>
+    <!-- Load TensorFlow.js and Teachable Machine libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <!-- Load Your JavaScript Files -->
+    <script src="script.js"></script>
+</body>
+</html>
