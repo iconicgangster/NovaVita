@@ -1,0 +1,24 @@
+{
+  "name": "hackathon",
+  "version": "1.0.0",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ./ -p 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iconicgangster/NovaVita.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iconicgangster/NovaVita/issues"
+  },
+  "homepage": "https://github.com/iconicgangster/NovaVita#readme",
+  "description": "",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
