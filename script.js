@@ -3,7 +3,7 @@ const modelURL = "https://teachablemachine.withgoogle.com/models/452-qZIFg/";
 
 // Get API key from environment configuration
 let PERPLEXITY_API_KEY =
-  "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";
+  "";
 
 // Waste materials information database
 const wasteInfo = {
